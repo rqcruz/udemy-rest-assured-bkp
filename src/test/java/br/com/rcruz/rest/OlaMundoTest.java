@@ -27,6 +27,15 @@ public class OlaMundoTest {
     public void devoConhecerOutrasFormasDeTrabalharComRestAssured() {
 
         // Executa os mesmos passos do teste testOlaMundo, mas de maneira encadeada e menos verbosa
-        get("https://restapi.wcaquino.me/ola").then().statusCode(201);
+        get("https://restapi.wcaquino.me/ola").then().statusCode(200);
+    }
+
+    @Test
+    public void devoConhecerOutrasFormasDeTrabalharComRestAssuredComGivenWhenThen() {
+
+        // Executa os mesmos passos do teste testOlaMundo, mas de maneira encadeada, menos verbosa e usando Given When Then
+        given()
+                .when().get("https://restapi.wcaquino.me/ola")
+                .then().statusCode(200);
     }
 }
