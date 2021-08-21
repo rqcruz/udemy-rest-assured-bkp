@@ -25,10 +25,8 @@ public class OlaMundoTest {
 
     @Test
     public void devoConhecerOutrasFormasDeTrabalharComRestAssured() {
-        Response response = request(Method.GET, "https://restapi.wcaquino.me/ola");
-        ValidatableResponse validate = response.then();
-        validate.statusCode(200);
 
+        // Executa os mesmos passos do teste testOlaMundo, mas de maneira encadeada e menos verbosa
         get("https://restapi.wcaquino.me/ola").then().statusCode(201);
     }
 }
